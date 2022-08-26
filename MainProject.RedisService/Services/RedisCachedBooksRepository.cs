@@ -26,10 +26,11 @@ namespace MainProject.RedisService.Services
 
         public async Task<Book> GetBook(string bookId)
         {
-           // var redisKeys = _redis.getasy
+           
 
             var result = new Book();
             result = JsonSerializer.Deserialize<Book>(await _cache.GetStringAsync(bookId));
+
 
             return result;
 
@@ -39,8 +40,8 @@ namespace MainProject.RedisService.Services
         {
             var content = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(book));
 
-            await _cache.SetAsync("Book_" + book.Id, content, new DistributedCacheEntryOptions { SlidingExpiration = TimeSpan.FromDays(1) });
-
+            await _cache.SetAsync("Book_" + book.Id, content, new DistributedCacheEntryOptions { SlidingExpiration = TimeSpan.FromMinutes(5) });
+            
 
             return book;
         }

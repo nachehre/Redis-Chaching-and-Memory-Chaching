@@ -11,11 +11,10 @@ namespace MainProject.RedisService.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddGSBServices(this IServiceCollection services,
-            IConfiguration configuration)
+        public static void AddRedisServices(this IServiceCollection services)
         {
-            services.AddTransient<IRedisCachedBooksRepository, RedisCachedBooksRepository>();
-            //services.AddHttpClient<IRedisCachedBooksRepository, RedisCachedBooksRepository>();
+            services.AddScoped<IRedisCachedBooksRepository, RedisCachedBooksRepository>();
+           
         }
     }
 }

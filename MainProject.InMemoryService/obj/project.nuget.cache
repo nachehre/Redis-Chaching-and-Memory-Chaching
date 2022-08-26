@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dwVKRYmkBVbQixSDS50QjdeR5nPK4CWIWLNv/4FDKobujQVbe+HC0qKdAfPFL4wJkjv9mpn8Vi/SsmI+HDzvOQ==",
+  "dgSpecHash": "BwcAoKQBJVRNxH2Jvw/BS2cfGpydPXohTCQWTmIYcoyMwyiMFucdY3XNFdGSdMSsp30kSud3n2T3b86PgopVKw==",
   "success": true,
   "projectFilePath": "E:\\Hasin-interview\\MainProject\\MainProject.InMemoryService\\MainProject.InMemoryService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],

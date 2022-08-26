@@ -1,0 +1,12 @@
+E:\Hasin-interview\MainProject\MainProject.Domain\bin\Debug\net5.0\MainProject.Domain.deps.json
+E:\Hasin-interview\MainProject\MainProject.Domain\bin\Debug\net5.0\MainProject.Domain.dll
+E:\Hasin-interview\MainProject\MainProject.Domain\bin\Debug\net5.0\MainProject.Domain.pdb
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\MainProject.Domain.csproj.AssemblyReference.cache
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\MainProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\MainProject.Domain.AssemblyInfoInputs.cache
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\MainProject.Domain.AssemblyInfo.cs
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\MainProject.Domain.csproj.CoreCompileInputs.cache
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\MainProject.Domain.dll
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\refint\MainProject.Domain.dll
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\MainProject.Domain.pdb
+E:\Hasin-interview\MainProject\MainProject.Domain\obj\Debug\net5.0\ref\MainProject.Domain.dll

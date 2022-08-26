@@ -13,26 +13,32 @@ namespace MainProject.InMemoryService.Services
         private readonly IMemoryCache _memoryCache;
         public MemoryCachedBooksRepository(IMemoryCache memoryCache)
         {
-            _memoryCache = memoryCache; 
+            _memoryCache = memoryCache;
         }
 
-        public Book OnGetBook(string bookId)
+        public async Task<Book> OnGetBook(string bookId)
         {
             Book book = new Book();
 
-            if (!_memoryCache.TryGetValue(bookId, out Book cacheValue))
+            var result = _memoryCache.Get(bookId);
+
+            if(result == null)
             {
-                cacheValue = book;
-
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromDays(1));
-
-                _memoryCache.Set(bookId, cacheValue, cacheEntryOptions);
+                return null;
             }
-
-            return cacheValue;
+            book = (Book)result;
+            return book;
         }
+       
 
-     
+        public void OnSetBook(Book book)
+        {
+
+
+            var cacheEntryOptions = new MemoryCacheEntryOptions()
+                .SetSlidingExpiration(TimeSpan.FromMinutes(1));
+
+            _memoryCache.Set(book.Id, book, cacheEntryOptions);
+        }
     }
 }

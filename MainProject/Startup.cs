@@ -1,3 +1,10 @@
+
+using MainProject.InMemoryService.Extensions;
+using MainProject.InMemoryService.Services;
+using MainProject.RedisService.Extensions;
+using MainProject.RedisService.Services;
+using MainProject.RepositoryService.Extensions;
+using MainProject.RepositoryService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,10 +35,14 @@ namespace MainProject
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MainProject", Version = "v1" });
-            });
+            services.AddSwaggerGen();
+            services.AddScoped<IBookRepository, BookRepositoory>();
+             services.AddScoped<IMemoryCachedBooksRepository, MemoryCachedBooksRepository>();
+            services.AddScoped<IRedisCachedBooksRepository, RedisCachedBooksRepository>();
+            services.AddHttpClient<IBookRepository, BookRepositoory>();
+            // services.AddBookServices();
+            // services.AddRedisServices();
+            // services.AddMemoryServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

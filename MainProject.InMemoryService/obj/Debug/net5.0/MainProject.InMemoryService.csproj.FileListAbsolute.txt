@@ -1,0 +1,15 @@
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\bin\Debug\net5.0\MainProject.InMemoryService.deps.json
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\bin\Debug\net5.0\MainProject.InMemoryService.dll
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\bin\Debug\net5.0\MainProject.InMemoryService.pdb
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\bin\Debug\net5.0\MainProject.Domain.dll
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\bin\Debug\net5.0\MainProject.Domain.pdb
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.csproj.AssemblyReference.cache
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.GeneratedMSBuildEditorConfig.editorconfig
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.AssemblyInfoInputs.cache
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.AssemblyInfo.cs
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.csproj.CoreCompileInputs.cache
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.csproj.CopyComplete
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.dll
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\refint\MainProject.InMemoryService.dll
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\MainProject.InMemoryService.pdb
+E:\Hasin-interview\MainProject\MainProject.InMemoryService\obj\Debug\net5.0\ref\MainProject.InMemoryService.dll

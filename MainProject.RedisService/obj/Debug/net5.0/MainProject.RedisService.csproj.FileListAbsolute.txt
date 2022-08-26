@@ -1,0 +1,15 @@
+E:\Hasin-interview\MainProject\MainProject.RedisService\bin\Debug\net5.0\MainProject.RedisService.deps.json
+E:\Hasin-interview\MainProject\MainProject.RedisService\bin\Debug\net5.0\MainProject.RedisService.dll
+E:\Hasin-interview\MainProject\MainProject.RedisService\bin\Debug\net5.0\MainProject.RedisService.pdb
+E:\Hasin-interview\MainProject\MainProject.RedisService\bin\Debug\net5.0\MainProject.Domain.dll
+E:\Hasin-interview\MainProject\MainProject.RedisService\bin\Debug\net5.0\MainProject.Domain.pdb
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.csproj.AssemblyReference.cache
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.GeneratedMSBuildEditorConfig.editorconfig
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.AssemblyInfoInputs.cache
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.AssemblyInfo.cs
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.csproj.CoreCompileInputs.cache
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.csproj.CopyComplete
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.dll
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\refint\MainProject.RedisService.dll
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\MainProject.RedisService.pdb
+E:\Hasin-interview\MainProject\MainProject.RedisService\obj\Debug\net5.0\ref\MainProject.RedisService.dll

@@ -7,11 +7,11 @@ namespace MainProject.RepositoryService.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddBookServices(this IServiceCollection services,
-            IConfiguration configuration)
+        public static void AddBookServices(this IServiceCollection services)
         {
-            services.AddTransient<IBookRepository, BookRepositoory>();
-            //services.AddHttpClient<IBookRepository, BookRepositoory>();
+            
+            services.AddScoped<IBookRepository, BookRepositoory>();
+            services.AddHttpClient<IBookRepository,BookRepositoory>();
         }
     }
 }

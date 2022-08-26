@@ -1,0 +1,15 @@
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\bin\Debug\net5.0\MainProject.RepositoryService.deps.json
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\bin\Debug\net5.0\MainProject.RepositoryService.dll
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\bin\Debug\net5.0\MainProject.RepositoryService.pdb
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\bin\Debug\net5.0\MainProject.Domain.dll
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\bin\Debug\net5.0\MainProject.Domain.pdb
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.csproj.AssemblyReference.cache
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.GeneratedMSBuildEditorConfig.editorconfig
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.AssemblyInfoInputs.cache
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.AssemblyInfo.cs
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.csproj.CoreCompileInputs.cache
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.csproj.CopyComplete
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.dll
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\refint\MainProject.RepositoryService.dll
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\MainProject.RepositoryService.pdb
+E:\Hasin-interview\MainProject\MainProject.RepositoryService\obj\Debug\net5.0\ref\MainProject.RepositoryService.dll

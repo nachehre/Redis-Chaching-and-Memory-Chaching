@@ -9,8 +9,8 @@ namespace MainProject.InMemoryService.Services
 {
     public interface IMemoryCachedBooksRepository
     {
-        Book OnGetBook(string bookId);
+        Task<Book> OnGetBook(string bookId);
 
-       
+        void OnSetBook(Book book);
     }
 }
