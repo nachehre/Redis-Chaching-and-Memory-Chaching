@@ -1,4 +1,5 @@
 ﻿using MainProject.Domain;
+using MainProject.Infra;
 using MainProject.InMemoryService.Services;
 using MainProject.RedisService.Services;
 using MainProject.RepositoryService.Services;
@@ -40,60 +41,20 @@ namespace MainProject.Controllers
 
                 throw new Exception("the bookId is not valid");
 
+            //with chain of responsibility pattern we created a regular call for this task
+            var apiGetter = new ApiGetter(_dataRepository,_redis, _memory);
 
-            //Step1: Check the memory for given bookId
-            var result = await _memory.OnGetBook(bookId);
+            var redisGetter= new RedisGetter(_redis, _memory);
+            redisGetter.SetNext(apiGetter);
 
-            if (result == null)
-            {
-
-                result = await CheckRedisValue(bookId);
-
-
-            }
-
-            return Ok(result);
+            var memoryGetter = new MemoryGetter(_memory); 
+            memoryGetter.SetNext(redisGetter);
+            var book= memoryGetter.Get(bookId);
+         
+            return Ok(book);
 
         }
 
-        private async Task<Book> CheckRedisValue(string bookId)
-        {
-            var result = await _redis.GetBook(bookId);
-            if (result != null)
-            {
-                Book book = new Book
-                {
-                    Id = result.Id,
-                    Title = result.Title,
-                    Author = result.Author,
-                    PublishDate = result.PublishDate
-
-                };
-                _memory.OnSetBook(book);
-                return result;
-
-            }
-            else
-            {
-                return await CheckApiRepository(bookId);
-
-            }
-        }
-
-        private async Task<Book> CheckApiRepository(string bookId)
-        {
-            var result = await _dataRepository.GetBookById(bookId);
-            Book book = new Book
-            {
-                Id = result.Id,
-                Title = result.Title,
-                Author = result.Author,
-                PublishDate = result.PublishDate
-
-            };
-            _memory.OnSetBook(book);
-            _redis.SetBook(book);
-            return result;
-        }
+     
     }
 }

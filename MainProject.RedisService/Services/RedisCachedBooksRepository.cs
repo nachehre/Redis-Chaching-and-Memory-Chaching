@@ -36,14 +36,14 @@ namespace MainProject.RedisService.Services
 
         }
 
-        public async Task<Book> SetBook(Book book)
+        public async void SetBook(Book book)
         {
             var content = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(book));
 
             await _cache.SetAsync("Book_" + book.Id, content, new DistributedCacheEntryOptions { SlidingExpiration = TimeSpan.FromMinutes(5) });
             
 
-            return book;
+            
         }
     }
 }

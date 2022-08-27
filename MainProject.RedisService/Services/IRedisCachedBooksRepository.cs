@@ -7,6 +7,6 @@ namespace MainProject.RedisService.Services
     {
         Task<Book> GetBook(string bookId);
 
-        Task<Book> SetBook(Book book);
+        void SetBook(Book book);
     }
 }
