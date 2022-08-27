@@ -109,6 +109,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "ServiceStack.Redis.Core": {
+              "target": "Package",
+              "version": "[6.2.0, )"
             }
           },
           "imports": [
@@ -181,6 +185,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "ServiceStack.Redis.Core": {
+              "target": "Package",
+              "version": "[6.2.0, )"
             }
           },
           "imports": [
@@ -257,6 +265,10 @@
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "ServiceStack.Redis.Core": {
+              "target": "Package",
+              "version": "[6.2.0, )"
             }
           },
           "imports": [
@@ -327,6 +339,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "ServiceStack.Redis.Core": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"

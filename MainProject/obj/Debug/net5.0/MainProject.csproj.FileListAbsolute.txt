@@ -56,3 +56,8 @@ E:\Hasin-interview\MainProject\MainProject\obj\Debug\net5.0\refint\MainProject.d
 E:\Hasin-interview\MainProject\MainProject\obj\Debug\net5.0\MainProject.pdb
 E:\Hasin-interview\MainProject\MainProject\obj\Debug\net5.0\MainProject.genruntimeconfig.cache
 E:\Hasin-interview\MainProject\MainProject\obj\Debug\net5.0\ref\MainProject.dll
+E:\Hasin-interview\MainProject\MainProject\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Hasin-interview\MainProject\MainProject\bin\Debug\net5.0\ServiceStack.Common.dll
+E:\Hasin-interview\MainProject\MainProject\bin\Debug\net5.0\ServiceStack.Interfaces.dll
+E:\Hasin-interview\MainProject\MainProject\bin\Debug\net5.0\ServiceStack.Redis.dll
+E:\Hasin-interview\MainProject\MainProject\bin\Debug\net5.0\ServiceStack.Text.dll

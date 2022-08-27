@@ -109,6 +109,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "ServiceStack.Redis.Core": {
+              "target": "Package",
+              "version": "[6.2.0, )"
             }
           },
           "imports": [

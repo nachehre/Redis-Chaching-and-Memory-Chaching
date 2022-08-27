@@ -36,13 +36,10 @@ namespace MainProject
 
             services.AddControllers();
             services.AddSwaggerGen();
-            services.AddScoped<IBookRepository, BookRepositoory>();
-             services.AddScoped<IMemoryCachedBooksRepository, MemoryCachedBooksRepository>();
-            services.AddScoped<IRedisCachedBooksRepository, RedisCachedBooksRepository>();
-            services.AddHttpClient<IBookRepository, BookRepositoory>();
-            // services.AddBookServices();
-            // services.AddRedisServices();
-            // services.AddMemoryServices();
+           
+            services.AddBookServices();
+            services.AddRedisServices();
+            services.AddMemoryServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
