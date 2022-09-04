@@ -4,7 +4,7 @@ using MainProject.RedisService.Services;
 using MainProject.RepositoryService.Services;
 using System.Threading.Tasks;
 
-namespace MainProject.Infra
+namespace MainProject.Infra.ChainResponsibilitySolution
 {
     public class ApiGetter : GetDataInchainBase
     {

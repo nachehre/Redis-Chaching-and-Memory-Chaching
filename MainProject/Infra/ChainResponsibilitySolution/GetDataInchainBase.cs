@@ -1,11 +1,11 @@
 ﻿using MainProject.Domain;
 using System.Threading.Tasks;
 
-namespace MainProject.Infra
+namespace MainProject.Infra.ChainResponsibilitySolution
 {
-    public abstract class GetDataInchainBase :IGetDataInChain
+    public abstract class GetDataInchainBase : IGetDataInChain
     {
-        protected IGetDataInChain  Next;
+        protected IGetDataInChain Next;
 
         public abstract Task<Book> Get(string id);
 

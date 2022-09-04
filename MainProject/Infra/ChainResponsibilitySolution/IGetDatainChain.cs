@@ -1,7 +1,7 @@
 ﻿using MainProject.Domain;
 using System.Threading.Tasks;
 
-namespace MainProject.Infra
+namespace MainProject.Infra.ChainResponsibilitySolution
 {
     public interface IGetDataInChain
     {
