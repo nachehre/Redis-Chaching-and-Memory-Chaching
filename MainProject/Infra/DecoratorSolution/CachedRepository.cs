@@ -12,6 +12,7 @@ namespace MainProject.Infra.StevenSolution
 
         public CachedRepository(IRepository inMemory, IRepository redis, IRepository webApi)
         {
+           
             _inMemory = inMemory;
             _redis = redis;
             _webApi = webApi;

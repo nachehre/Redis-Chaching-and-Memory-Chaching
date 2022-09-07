@@ -1,7 +1,7 @@
 ﻿using MainProject.Domain;
 using System.Threading.Tasks;
 
-namespace MainProject.Infra.StevenSolution
+namespace MainProject.Domain
 {
     public interface IRepository
     {

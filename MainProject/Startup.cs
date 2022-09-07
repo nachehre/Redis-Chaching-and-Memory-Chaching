@@ -1,4 +1,6 @@
 
+using MainProject.Domain;
+using MainProject.Infra.StevenSolution;
 using MainProject.InMemoryService.Extensions;
 using MainProject.InMemoryService.Services;
 using MainProject.RedisService.Extensions;
@@ -40,6 +42,11 @@ namespace MainProject
             services.AddBookServices();
             services.AddRedisServices();
             services.AddMemoryServices();
+            services.AddScoped<IRepository>(src =>
+            {
+
+                return new InMemoryRepo(new RedisRepo(new Api());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

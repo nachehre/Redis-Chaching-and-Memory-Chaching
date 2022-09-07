@@ -17,21 +17,16 @@ namespace MainProject.Controllers
     public class BookApiController : ControllerBase
     {
 
-       
-        private readonly IBookRepository _dataRepository;
-        private readonly IRedisCachedBooksRepository _redis;
-        private readonly IMemoryCachedBooksRepository _memory;
 
-        public BookApiController(
-            IBookRepository dataRepository,
-            IRedisCachedBooksRepository redis,
-            IMemoryCachedBooksRepository memory
-            )
+        //private readonly IBookRepository _dataRepository;
+        //private readonly IRedisCachedBooksRepository _redis;
+        //private readonly IMemoryCachedBooksRepository _memory;
+
+        private readonly IRepository _repository;
+
+        public BookApiController(IRepository repository)
         {
-            
-            _memory = memory;
-            _redis = redis;
-            _dataRepository = dataRepository;
+            _repository = repository;
         }
 
         [HttpGet("{id}")]
@@ -41,15 +36,18 @@ namespace MainProject.Controllers
 
                 throw new Exception("the bookId is not valid");
 
+           
+
             //with chain of responsibility pattern we created a regular call for this task
-            var apiGetter = new ApiGetter(_dataRepository,_redis, _memory);
+            //var apiGetter = new ApiGetter(_dataRepository,_redis, _memory);
 
-            var redisGetter= new RedisGetter(_redis, _memory);
-            redisGetter.SetNext(apiGetter);
+            //var redisGetter= new RedisGetter(_redis, _memory);
+            //redisGetter.SetNext(apiGetter);
 
-            var memoryGetter = new MemoryGetter(_memory); 
-            memoryGetter.SetNext(redisGetter);
-            var book= memoryGetter.Get(bookId);
+            //var memoryGetter = new MemoryGetter(_memory); 
+            //memoryGetter.SetNext(redisGetter);
+            //var book= memoryGetter.Get(bookId);
+            _repository.GetAsync(id);
          
             return Ok(book);
 
