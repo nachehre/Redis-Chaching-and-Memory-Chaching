@@ -16,4 +16,8 @@
     <ProjectReference Include="..\MainProject.RepositoryService\MainProject.RepositoryService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Infra\DecoratorSolution\" />
+  </ItemGroup>
+
 </Project>
