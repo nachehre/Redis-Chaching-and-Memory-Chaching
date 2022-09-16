@@ -1,13 +1,7 @@
-﻿using MainProject.Domain;
-using MainProject.Infra;
-using MainProject.InMemoryService.Services;
-using MainProject.RedisService.Services;
-using MainProject.RepositoryService.Services;
+﻿
+using MainProject.Infra.Steven_Solution;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MainProject.Controllers
@@ -17,16 +11,23 @@ namespace MainProject.Controllers
     public class BookApiController : ControllerBase
     {
 
+        //decorator Pattern
+        //private readonly MainProject.Infra.StevenSolution.IRepository _repository;
 
-        //private readonly IBookRepository _dataRepository;
-        //private readonly IRedisCachedBooksRepository _redis;
-        //private readonly IMemoryCachedBooksRepository _memory;
+        //public BookApiController(IRepository repository)
+        //{
+        //    _repository = repository;
+        //}
 
-        private readonly IRepository _repository;
+        private readonly IRepository _memory;
+        private readonly IRepository _redis;
+        private readonly IRepository _api;
 
-        public BookApiController(IRepository repository)
+        public BookApiController(IRepository memory, IRepository redis, IRepository api)
         {
-            _repository = repository;
+            _memory = memory;
+            _redis = redis;
+            _api = api;
         }
 
         [HttpGet("{id}")]
@@ -35,9 +36,7 @@ namespace MainProject.Controllers
             if (bookId == null)
 
                 throw new Exception("the bookId is not valid");
-
-           
-
+            var cache = new CachedRepository(_memory, _redis, _api);
             //with chain of responsibility pattern we created a regular call for this task
             //var apiGetter = new ApiGetter(_dataRepository,_redis, _memory);
 
@@ -47,8 +46,8 @@ namespace MainProject.Controllers
             //var memoryGetter = new MemoryGetter(_memory); 
             //memoryGetter.SetNext(redisGetter);
             //var book= memoryGetter.Get(bookId);
-            _repository.GetAsync(id);
-         
+            //var book= await  _repository.GetAsync(bookId);
+            var book = await cache.GetAsync(bookId);
             return Ok(book);
 
         }

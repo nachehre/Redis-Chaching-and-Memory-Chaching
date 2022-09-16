@@ -14,8 +14,6 @@ namespace MainProject.RepositoryService.Services
         //private readonly HttpClient _httpClient;
         private readonly IHttpClientFactory _httpClient;
 
-      
-
         public BookRepositoory(IHttpClientFactory httpClient)
         {
             _httpClient = httpClient;

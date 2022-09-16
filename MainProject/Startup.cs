@@ -1,25 +1,16 @@
 
-using MainProject.Domain;
+using MainProject.Infra.Steven_Solution.Services;
 using MainProject.Infra.StevenSolution;
 using MainProject.InMemoryService.Extensions;
-using MainProject.InMemoryService.Services;
+using MainProject.Infra.Steven_Solution;
 using MainProject.RedisService.Extensions;
-using MainProject.RedisService.Services;
 using MainProject.RepositoryService.Extensions;
-using MainProject.RepositoryService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace MainProject
 {
@@ -42,10 +33,23 @@ namespace MainProject
             services.AddBookServices();
             services.AddRedisServices();
             services.AddMemoryServices();
-            services.AddScoped<IRepository>(src =>
-            {
+            //services.AddScoped<IRepository>(src =>
+            //{
+            //    return new MemoryCachedBooksRepository(new  
+            //        RedisCachedBooksRepository(new BookRepositoory());
+            //});
+            //Steven Solution
+            services.AddScoped<InMemoryRepository>();
+            services.AddScoped<RedisRepository>();
+            services.AddScoped<WebApiRepository>();
 
-                return new InMemoryRepo(new RedisRepo(new Api());
+            services.AddScoped<IRepository>(p =>
+            {
+                var redis=p.GetRequiredService<RedisRepository>();
+                var memory = p.GetRequiredService<InMemoryRepository>();
+                var api = p.GetRequiredService<WebApiRepository>();
+                return new CachedRepository(memory, redis, api);
+
             });
         }
 

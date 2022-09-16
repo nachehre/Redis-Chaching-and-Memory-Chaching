@@ -1,7 +1,7 @@
 ﻿using MainProject.Domain;
 using System.Threading.Tasks;
 
-namespace MainProject.Infra.StevenSolution
+namespace MainProject.Infra.Steven_Solution
 {
     public class CachedRepository : IRepository
     {
