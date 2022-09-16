@@ -18,15 +18,28 @@ namespace MainProject.Infra.Steven_Solution
             _webApi = webApi;
         }
 
-        public async Task<Book> GetAsync(string id)
+        //public async Task<Book> GetAsync(string id)
+        //{
+        //    var book = await _inMemory.GetAsync(id);
+        //    if (book !=null)
+        //    {
+        //        return book;
+        //    }
+        //    book = await _redis.GetAsync(id);
+        //    return book is not null ? book : await _webApi.GetAsync(id);
+        //}
+
+       public async ValueTask<Book> GetAsync(string id)
         {
             var book = await _inMemory.GetAsync(id);
-            if (book !=null)
+            if (book != null)
             {
                 return book;
             }
             book = await _redis.GetAsync(id);
             return book is not null ? book : await _webApi.GetAsync(id);
         }
+
+      
     }
 }
